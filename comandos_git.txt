@@ -1,0 +1,6 @@
+git init
+git remote add origin https://github.com/BALT9/pagina_web_react.git
+--------------------------------------------
+git add .
+git commit -m "nuevo proyecto"
+git push origin master
