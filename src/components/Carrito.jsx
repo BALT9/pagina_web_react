@@ -14,7 +14,11 @@ function Carrito(){
         let subirCarrito = [...carrito, x]
         setCarrito(subirCarrito);
     }
-
+    function eliminarDelCarrito(i){
+        let nuevoCarrito = [...carrito];
+        nuevoCarrito.splice(i, 1);
+        setCarrito(nuevoCarrito);
+    }
     return(
         <>
         <h1>holaaa carrito</h1>
@@ -38,9 +42,15 @@ function Carrito(){
         <table border="1"> 
         <tbody>
         {
-                    carrito.map((i,pos)=>(
+                    carrito.map((item,pos)=>(
                         <tr key={pos}>
-                            <td>{i}</td>
+
+                            <td>
+                                {item}
+                                <button onClick={()=> eliminarDelCarrito(pos)}>-</button>
+                            </td>
+                            
+                            
                         </tr>
                     ))
                 }
